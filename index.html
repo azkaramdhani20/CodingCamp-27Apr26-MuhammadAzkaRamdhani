@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Expense Visualizer</title>
+
+<!-- CSS -->
+<link rel="stylesheet" href="style.css">
+
+<!-- Chart.js -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+<div class="container">
+
+<h2>Expense & Budget Visualizer</h2>
+
+<div class="card">
+    <p>Total Balance</p>
+    <div class="balance" id="balance">$0</div>
+</div>
+
+<div class="card">
+    <h3>Add Transaction</h3>
+    <input type="text" id="name" placeholder="Item name">
+    <input type="number" id="amount" placeholder="Amount">
+    <select id="category">
+        <option>Food</option>
+        <option>Transport</option>
+        <option>Fun</option>
+    </select>
+    <button onclick="addTransaction()">Add Transaction</button>
+</div>
+
+<div class="card">
+    <h3>Transactions</h3>
+    <div id="list"></div>
+</div>
+
+<div class="card">
+    <h3>Spending by Category</h3>
+    <canvas id="chart"></canvas>
+</div>
+
+</div>
+
+<!-- JS -->
+<script src="script.js"></script>
+</body>
+</html>
